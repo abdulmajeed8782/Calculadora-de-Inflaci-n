@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Argentina.gg</title>
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Ponte en contacto con el equipo de Argentina.gg. Envíanos tus preguntas, sugerencias o comentarios a través de nuestro formulario.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Main Navigation -->
+        <header class="main-header">
+              <nav class="main-nav">
+                <a href="index.html" class="active">Calculadora</a>
+                <a href="Sobre-Nosotros.html">Sobre Nosotros</a>
+                <a href="Ponte-en-Contacto.html">Contacto</a>
+                <a href="Política-de-Privacidad.html">Privacidad</a>
+            </nav>
+        </header>
+
+        <!-- Page Content -->
+        <main class="content-container">
+            <section class="content-section">
+                <h1>Ponte en Contacto</h1>
+                <p>¿Tienes alguna pregunta, sugerencia o has encontrado un error? Nos encantaría saber de ti. Utiliza el siguiente formulario para enviarnos un mensaje y te responderemos lo antes posible.</p>
+            </section>
+            
+            <section class="content-section">
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Enviar Mensaje</button>
+                </form>
+                <div id="form-feedback" class="form-feedback hidden"></div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <a href="index.html" class="internal-link">Volver a la Calculadora</a>
+            <p>&copy; 2024 Argentina.gg. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+    <script>
+        // Simple script for form feedback. In a real application, this would involve an AJAX call to a server.
+        const contactForm = document.getElementById('contact-form');
+        const formFeedback = document.getElementById('form-feedback');
+        if(contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                formFeedback.textContent = '¡Gracias por tu mensaje! Lo hemos recibido correctamente.';
+                formFeedback.classList.remove('hidden');
+                contactForm.reset();
+                setTimeout(() => formFeedback.classList.add('hidden'), 5000);
+            });
+        }
+    </script>
+</body>
+</html>

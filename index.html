@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Calculadora de Inflación Online para Argentina, México, Colombia y más</title>
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Calcula el valor real de tu dinero en el tiempo. Descubre cómo la inflación afecta tu poder de compra con esta herramienta fácil de usar.">
+    <meta name="keywords" content="calculadora de inflacion argentina, calculadora de inflacion colombia, calculadora de inflacion inegi, calculadora de inflación dólar, calculadora de inflacion chile, calculadora de inflación méxico, calculadora de inflacion estados unidos, calculadora de inflacion españa, calculadora de inflación acumulada, calculadora de inflacion chequeado, calculadora de inflacion peru">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Schema Markup (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Calculadora de Inflación Argentina",
+      "description": "Una herramienta web gratuita para calcular el impacto de la inflación en el peso argentino. Ingresa un monto y un período de tiempo para ver su valor equivalente ajustado según el Índice de Precios al Consumidor (IPC) oficial.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "inLanguage": "es",
+      "keywords": "calculadora de inflacion argentina, calculadora de inflacion colombia, calculadora de inflacion mexico, calculadora de inflacion chile, calculadora de inflacion peru, calculadora de inflacion dolar, ipc, indec",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "ARS"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Calculadora de Inflación",
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Juan Carlos",
+        "url": "https://www.linkedin.com/in/juancarlos"
+      }
+    }
+    </script>
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Main Navigation Header -->
+        <header class="main-header">
+             <a href="index.html" class="logo">Calculadora de Inflación</a>
+           <nav class="main-nav">
+                <a href="index.html" class="active">Calculadora</a>
+                <a href="Sobre-Nosotros.html">Sobre Nosotros</a>
+                <a href="Ponte-en-Contacto.html">Contacto</a>
+                <a href="Política-de-Privacidad.html">Privacidad</a>
+            </nav>
+        </header>
+
+        <div class="calculator-container">
+            <!-- Calculator Title Section -->
+            <header class="calculator-header">
+                <h1 class="title">Calculadora de Inflación</h1>
+                <p class="subtitle">Basada en el IPC de Argentina (INDEC)</p>
+            </header>
+
+            <!-- Main Calculator Interface -->
+            <main class="calculator-body">
+                <!-- Input Section -->
+                <div class="input-section">
+                    <div class="input-group">
+                        <label for="amount">Monto Inicial</label>
+                        <div class="amount-wrapper">
+                            <span>$</span>
+                            <input type="number" id="amount" value="1000" class="amount-input">
+                        </div>
+                    </div>
+                    <div class="date-selectors">
+                        <div class="date-group">
+                            <label>Desde</label>
+                            <div class="date-inputs">
+                                <select id="from-month" class="date-select"></select>
+                                <select id="from-year" class="date-select"></select>
+                            </div>
+                        </div>
+                        <div class="date-group">
+                            <label>Hasta</label>
+                            <div class="date-inputs">
+                                <select id="to-month" class="date-select"></select>
+                                <select id="to-year" class="date-select"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="divider"></div>
+
+                <!-- Results Section -->
+                <div class="results-section">
+                    <p class="result-label">Equivalente a</p>
+                    <h2 id="final-amount" class="result-value">$1,155.60</h2>
+                    <div id="error-message" class="error-message hidden">La fecha inicial no puede ser posterior a la fecha final.</div>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <p class="stat-label">Inflación Acumulada</p>
+                            <p id="cumulative-inflation" class="stat-value">15.56%</p>
+                        </div>
+                        <div class="stat-item">
+                            <p class="stat-label">Promedio Mensual</p>
+                            <p id="monthly-average" class="stat-value">1.22%</p>
+                        </div>
+                        <div class="stat-item">
+                            <p class="stat-label">Promedio Anual</p>
+                            <p id="annual-average" class="stat-value">15.66%</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- CTA Button Section -->
+        <div class="cta-section">
+            <a href="https://calculadorade-inflacion.com/index.html" class="cta-button">calculadora de inflacion</a>
+        </div>
+
+        <!-- Article Content Section -->
+        <div class="content-container">
+            <!-- Data Sources Section -->
+            <section class="content-section">
+                <h2>De dónde vienen nuestros datos</h2>
+                <p>Para nuestros cálculos usamos el Índice de Precios al Consumidor (IPC).</p>
+                <ul>
+                    <li><strong>Datos desde 2017:</strong> Provienen del INDEC (Instituto Nacional de Estadística y Censos de Argentina).</li>
+                    <li><strong>Datos antiguos (1943-2017):</strong> Se basan en un estudio económico del MIT, reconocido por su precisión.</li>
+                    <li><strong>Estimaciones futuras:</strong> Usamos los pronósticos de mercado que publica el Banco Central de Argentina.</li>
+                    <li><strong>Precio del dólar:</strong> Los valores del dólar se toman de fuentes del mercado financiero.</li>
+                </ul>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="content-section">
+                <h2>Preguntas Frecuentes</h2>
+                <div class="faq-container">
+                    <details class="faq-item">
+                        <summary class="faq-question">¿Qué significan las fechas en la calculadora?</summary>
+                        <div class="faq-answer">
+                            <p>Cada fecha representa el primer día de ese mes. Por ejemplo, si eliges "enero de 1992", el cálculo se hace desde el "1 de enero de 1992".</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">¿Por qué el aumento del dólar no coincide con la inflación que me muestra la herramienta?</summary>
+                        <div class="faq-answer">
+                            <p>Porque la inflación es el aumento promedio de una canasta de muchos productos y servicios (comida, ropa, alquiler, etc.). El dólar es solo un precio más y puede subir a un ritmo diferente (más rápido o más lento) que el promedio general.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">Si la inflación anual fue 50%, ¿por qué en 2 años el total es 125% y no 100%?</summary>
+                        <div class="faq-answer">
+                            <p>Porque la inflación se acumula. Si algo de $100 sube 50% el primer año, su nuevo precio es $150. El segundo año, el 50% de aumento se calcula sobre los $150, no sobre los $100 iniciales. Por eso el precio final es $225, lo que es un aumento total del 125%.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">¿Y si creo que los datos son incorrectos?</summary>
+                        <div class="faq-answer">
+                            <p>Usamos fuentes oficiales y los datos suelen ser muy precisos, aunque puede haber pequeñas diferencias por redondeo. Si después de revisar crees que hay un error, por favor avísanos usando el <a href="contact.html" class="internal-link">formulario de contacto</a>.</p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Author Bio Section -->
+            <section class="author-bio content-section">
+                <h3 class="author-title">Sobre el Autor</h3>
+                <p class="author-text">
+                    Juan Carlos es un analista financiero con más de 10 años de experiencia en mercados latinoamericanos. Apasionado por la tecnología y la democratización de los datos, crea herramientas para ayudar a las personas a tomar mejores decisiones financieras.
+                </p>
+                <div class="author-socials">
+                    <a href="https://twitter.com/juancarlos" target="_blank" rel="noopener noreferrer" aria-label="Twitter del autor">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                    <a href="https://linkedin.com/in/juancarlos" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn del autor">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="https://github.com/juancarlos" target="_blank" rel="noopener noreferrer" aria-label="GitHub del autor">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="page-footer">
+            <nav class="footer-nav">
+                <a href="index.html" class="active">Calculadora</a>
+                <a href="Sobre-Nosotros.html">Sobre Nosotros</a>
+                <a href="Ponte-en-Contacto.html">Contacto</a>
+                <a href="Política-de-Privacidad.html">Privacidad</a>
+            </nav>
+            <p>&copy; 2025. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
